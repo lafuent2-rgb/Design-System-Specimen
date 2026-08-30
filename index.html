@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design System Specimen</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+  <p class="eyebrow">Design System</p>
+  <h1>Interface Specimen</h1>
+  <p class="intro">
+    A small design system showing foundational styles, tokens, typography,
+    actions, surfaces, and form controls.
+  </p>
+  <p class="viewport-status">
+  Viewport status: <strong>wide</strong>
+  </p>
+        </header>
+<main>
+
+    <section class="specimen-section" id="foundation">
+  <h2>S1 — Foundation and Reset</h2>
+  <p>
+    This project uses a small selective reset instead of removing every
+    browser default.
+  </p>
+
+  <ul>
+    <li>
+      <code>box-sizing: border-box</code> keeps declared widths easier to
+      calculate because padding and borders are included in the element width.
+    </li>
+    <li>
+      <code>body { margin: 0; }</code> removes the browser's default body margin
+      so page spacing can be controlled intentionally.
+    </li>
+    <li>
+      Images and SVGs use <code>max-width: 100%</code> so they do not overflow
+      their containers.
+    </li>
+    <li>
+      Heading, paragraph, list, and form defaults are not completely removed
+      because useful browser behavior is intentionally preserved.
+    </li>
+  </ul>
+</section>
+  <section class="specimen-section" id="tokens">
+    <h2>S2 — Token Inventory</h2>
+    <p>
+      These tokens provide reusable values for color, spacing, typography,
+      and border radius throughout the design system.
+    </p>
+
+    <div class="token-group">
+      <h3>Color Tokens</h3>
+
+      <div class="token-list">
+        <div class="token-item">
+          <span class="color-swatch primary-swatch"></span>
+          <code>--color-primary</code>
+        </div>
+
+        <div class="token-item">
+          <span class="color-swatch text-swatch"></span>
+          <code>--color-text</code>
+        </div>
+
+        <div class="token-item">
+          <span class="color-swatch surface-swatch"></span>
+          <code>--color-surface</code>
+        </div>
+      </div>
+    </div>
+
+    <div class="token-group">
+  <h3>Semantic Tokens</h3>
+  <p>
+    <code>--color-action</code>,
+    <code>--color-action-hover</code>,
+    <code>--color-page</code>,
+    <code>--color-card</code>,
+    <code>--color-copy</code>,
+    <code>--color-copy-muted</code>
+  </p>
+</div>
+
+<div class="usage-note">
+  <h3>Usage Note</h3>
+  <p>
+    Semantic tokens should be used when styling interface roles such as
+    actions, page backgrounds, surfaces, and text. This keeps component
+    styles consistent even if the underlying color values change later.
+  </p>
+</div>
+
+    <div class="token-group">
+  <h3>Spacing Tokens</h3>
+  <p>
+    <code>--space-1</code>,
+    <code>--space-2</code>,
+    <code>--space-3</code>,
+    <code>--space-4</code>
+  </p>
+</div>
+
+<div class="token-group">
+  <h3>Sizing and Measure Tokens</h3>
+  <p>
+    <code>--size-control</code>,
+    <code>--measure-text</code>,
+    <code>--measure-page</code>
+  </p>
+</div>
+
+<div class="token-group">
+  <h3>Elevation Tokens</h3>
+  <p>
+    <code>--shadow-low</code> and
+    <code>--shadow-medium</code>
+  </p>
+</div>
+
+<div class="token-group">
+  <h3>Radius Tokens</h3>
+  <p>
+    <code>--radius-small</code> and
+    <code>--radius-medium</code>
+  </p>
+</div>
+
+<div class="token-group">
+  <h3>Typography Tokens</h3>
+  <p>
+    <code>--font-size-small</code>,
+    <code>--font-size-base</code>,
+    <code>--font-size-large</code>,
+    <code>--font-size-heading</code>
+  </p>
+</div>
+
+
+  </section>
+
+<section class="specimen-section" id="typography">
+  <h2>S3 — Typography</h2>
+  <p>
+    The typography system creates a clear hierarchy for headings,
+    body content, supporting text, and links.
+  </p>
+
+  <div class="type-sample">
+    <h1>Heading Level 1</h1>
+    <h2>Heading Level 2</h2>
+    <h3>Heading Level 3</h3>
+
+    <div class="usage-note">
+  <h3>Usage Note</h3>
+  <p>
+    Headings should be used in order to create a clear content hierarchy.
+    Body text is used for general reading, while small text is reserved for
+    supporting information. Links should remain visually distinct and include
+    a visible keyboard focus state.
+  </p>
+</div>
+
+    <p>
+      This is an example of standard body text used for paragraphs
+      and general page content.
+    </p>
+
+    <p class="small-text">
+      This is supporting small text for less prominent information.
+    </p>
+
+    <p>
+      <a href="#typography">This is an example text link</a>
+    </p>
+  </div>
+</section>
+
+<section class="specimen-section" id="actions">
+  <h2>S4 — Actions and States</h2>
+  <p>
+    Action styles provide clear interactive controls with visible hover,
+    focus, and disabled states.
+  </p>
+
+  <div class="usage-note">
+  <h3>Usage Note</h3>
+  <p>
+    Primary actions are used for the most important action in a section.
+    Secondary actions are used for less prominent choices. Interactive
+    controls should provide visible hover and keyboard focus states, while
+    unavailable actions should use the disabled state.
+  </p>
+</div>
+
+  <div class="action-group">
+    <button class="button button-primary" type="button">
+      Primary Action
+    </button>
+    
+
+    <button class="button button-secondary" type="button">
+      Secondary Action
+    </button>
+
+    <button class="button button-primary" type="button" disabled>
+      Disabled Action
+    </button>
+  </div>
+</section>
+
+<section class="specimen-section theme-alt" id="surfaces">
+  <h2>S5 — Surfaces and Content Patterns</h2>
+  <p>
+    Surface patterns group related information into clear and reusable
+    content areas.
+  </p>
+
+  <div class="usage-note">
+  <h3>Usage Note</h3>
+  <p>
+    Cards should group related content that belongs together. Use consistent
+    spacing, borders, radius, and surface colors across cards. Avoid using
+    cards when the content does not need to be visually separated.
+  </p>
+</div>
+
+  <div class="card-grid">
+
+    <article class="card">
+      <h3>Basic Card</h3>
+      <p>
+        A simple card groups related content inside a distinct surface.
+      </p>
+      <a href="#surfaces">Learn more</a>
+    </article>
+
+    <article class="card">
+      <h3>Feature Card</h3>
+      <p>
+        Cards can use the same spacing, color, border, and typography
+        tokens throughout the interface.
+      </p>
+      <button class="button button-primary" type="button">
+        View Feature
+      </button>
+    </article>
+
+  </div>
+</section>
+
+<section class="specimen-section" id="controls">
+  <h2>S6 — Control Foundations</h2>
+  <p>
+    Form controls use consistent labels, spacing, borders, and focus states
+    to make user input clear and accessible.
+  </p>
+
+  <div class="usage-note">
+  <h3>Usage Note</h3>
+  <p>
+    Form controls should use clear labels, consistent spacing, and visible
+    keyboard focus states. These examples establish basic control styling;
+    full form design is reserved for Module 3.
+  </p>
+</div>
+
+  <form class="control-demo">
+    <div class="form-field">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name">
+    </div>
+
+    <div class="form-field">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="name@example.com">
+    </div>
+
+    <div class="form-field">
+      <label for="topic">Topic</label>
+      <select id="topic" name="topic">
+        <option value="">Choose a topic</option>
+        <option value="design">Design</option>
+        <option value="development">Development</option>
+      </select>
+    </div>
+
+    <div class="form-field">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4"></textarea>
+    </div>
+
+    <button class="button button-primary" type="submit">
+      Submit
+    </button>
+  </form>
+</section>
+</main>
+</div>
+
+</body>
+</html>
